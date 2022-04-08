@@ -267,7 +267,7 @@ section {
 
   .col50 .my__photo {
     display: block;
-    margin: 0 auto;
+    margin: 40px auto;
   }
   .toggle__menu {
     position: relative;
