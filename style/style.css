@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url("img/sketch.jpg");
+  background-size: cover;
+}
+:root {
+  --red: #ff0000;
+  --brown: rgba(59, 46, 46, 0.882);
+  --black: rgba(0, 0, 0, 0.8);
+  --white: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 50px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  background: var(--brown);
+}
+
+.logo {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+}
+
+.nav li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 300;
+}
+
+.nav li a:hover {
+  color: var(--white);
+}
+
+.messenger {
+  margin-top: 40px;
+}
+.messenger__nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px;
+}
+
+.messenger__nav li {
+  list-style: none;
+}
+.messenger__nav li a {
+  text-decoration: none;
+}
+
+.messenger__nav li a img {
+  width: 50px;
+}
+
+section {
+  padding: 50px;
+}
+
+.about .container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.col50 {
+  position: relative;
+  width: 100%;
+}
+
+.col50 .my__photo {
+  position: relative;
+  margin-left: 30px;
+  width: 340px;
+  min-height: 450px;
+  border: 15px solid var(--white);
+  box-shadow: 10px 5px 35px var(--black);
+}
+
+.col50 .my__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.titleText {
+  color: var(--black);
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.titleText span {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.hobby .title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hobby .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+.hobby .content .box {
+  width: 340px;
+  margin: 20px;
+  border: 15px solid var(--white);
+  box-shadow: 10px 5px 35px var(--black);
+}
+
+.hobby__img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.hobby__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hobby__text {
+  padding: 15px 0 5px;
+  text-align: center;
+}
+
+.hobby__text h3 {
+  font-weight: 400;
+  color: #111;
+}
+
+.table {
+  width: 100%;
+  font-size: 20px;
+  border: 15px solid var(--white);
+  box-shadow: 10px 5px 35px var(--black);
+}
+
+.table th {
+  background: var(--red);
+  padding-bottom: 10px;
+}
+.table td {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.table td:hover {
+  color: var(--red);
+}
+
+.table tr:nth-child(even) {
+  background: var(--brown);
+}
+.table tr:nth-child(odd) {
+  background: var(--white);
+}
+
+.technology .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.technology .content .technology__img {
+  margin: 30px;
+}
+
+.technology__img img {
+  width: 150px;
+}
+
+.contact {
+  text-align: center;
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: inherit;
+  padding-top: 0;
+  padding-bottom: 80px;
+}
+
+.contact__form {
+  border: 15px solid var(--white);
+  box-shadow: 10px 5px 35px var(--black);
+  padding: 20px;
+}
+
+.form__group label {
+  display: block;
+}
+
+.form__group input,
+.form__group textarea {
+  width: 100%;
+}
+
+.btn {
+  background: var(--red);
+  font-family: inherit;
+  margin-top: 20px;
+  padding: 5px 50px;
+  font-size: 16px;
+  letter-spacing: 5px;
+  cursor: pointer;
+  border: 1px solid var(--white);
+  box-shadow: 5px 5px 15px var(--black);
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  background: var(--red);
+}
+
+@media (max-width: 991px) {
+  .about .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .col50 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .col50 .my__photo {
+    display: block;
+    margin: 0 auto;
+  }
+  .toggle__menu {
+    position: relative;
+    width: 32px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .toggle__menu::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--red);
+    transform: translateY(-10px);
+    transition: 0.25s;
+    box-shadow: 0 10px 0 var(--red);
+  }
+
+  .toggle__menu.active::before {
+    transform: translateY(0) rotate(45deg);
+    box-shadow: 0 0 0 var(--red);
+  }
+  .toggle__menu::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--red);
+    transform: translateY(10px);
+    transition: 0.25s;
+  }
+
+  .toggle__menu.active::after {
+    transform: translateY(0) rotate(-45deg);
+    box-shadow: 0 0 0 var(--red);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    background: var(--white);
+    flex-direction: column;
+  }
+
+  .nav li a {
+    font-size: 1.5em;
+    margin: 10px 0;
+    display: inline-block;
+  }
+
+  .nav li a:hover {
+    color: var(--brown);
+  }
+}
+
+@media (max-width: 480px) {
+  .col50 .my__photo {
+    position: relative;
+    width: 250px;
+    min-height: 250px;
+    border: 15px solid var(--white);
+    box-shadow: 10px 5px 35px var(--black);
+  }
+  .col50 .my__photo img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+
+  .technology__img img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 420px) {
+  .btn {
+    padding: 5px 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn {
+    padding: 0;
+    letter-spacing: 0;
+  }
+
+  .table {
+    font-size: 10px;
+  }
+}
